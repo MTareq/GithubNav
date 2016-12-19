@@ -15,6 +15,7 @@ $ pip install -r requirements.txt
 
 ======Running the Application=====
 
+$ cd app
 $ python application.py
 
 Access this url in your browser:

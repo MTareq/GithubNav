@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Github Navigator</title>
+</head>
+<body>
+    <h1>{{context.search_term}}</h1>
+    <ol >
+    {% for info in context.results %}
+        <li>
+            <h2>{{info.repo_name}}</h2>
+            <h3>Created {{info.created_at}}</h3>
+            <a href="https://github.com/{{info.owner}}"><img src="{{info.avatar_url}}" alt="avatar" height="42" width="42"></a>
+            {{info.owner}}
+            <h3>Last Commit</h3>
+            <p>
+                {{info.commit_sha}}
+                {{info.commit_message}}
+                {{info.commit_author}}
+                {{info.api_message}}
+            </p>
+        </li>
+        <hr>
+    {% endfor %}
+    </ol>
+
+</body>
+</html>

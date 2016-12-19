@@ -1,34 +1,34 @@
-======Requirements=====
+###Requirements
 
 Python (2.7.x, 3.x), python-pip, virtualenv
 
-======Installation=====
+###Installation
 
---Create a virtual enviroment 
-
+- Create a virtual enviroment 
+```bash
 $ virtualenv env 
 $ source env/bin/activate
-
---Install the required packages as such:
-
+```
+- Install the required packages as such:
+```
 $ pip install -r requirements.txt
+```
+###Running the Application
 
-======Running the Application=====
-
-$ cd app
-$ python application.py
-
-Access this url in your browser:
+```bash
+$ python app/application.py
+```
+- Access this url in your browser:
 
 http://localhost:5000/navigator?search_term=<search_term>
 
-======Third party packages used======
+###Third party packages used
 
 1. Flask (http://flask.pocoo.org/)
 2. Requests (http://docs.python-requests.org/)
 
 
-======Rundown======
+###Rundown
 
 1. Using the navigator view the app extracts the search term from the get request.
 2. Using requests the app calls for github api to get repos that matches the search term.
@@ -37,7 +37,7 @@ http://localhost:5000/navigator?search_term=<search_term>
 5. A serialized structure is created as results, and passed as context to the html template that renders it.
 
 
-======Constraint======
+###Constraint
 
 This application is limited to 10 requests per minute, since it calls for the github api using unauthenticated requests. 
 
